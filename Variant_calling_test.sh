@@ -4,7 +4,7 @@
 
 #cd <path_to_bayvarc_folder>
 ./bin/BayVarC \
-  -i Input data/OS-01.mpileup \
+  -i ./Input data/OS-01.mpileup \
   -s OS-01 \
   -m ./Panel_of_normal_model/ \
   -p all40s \
