@@ -1,0 +1,29 @@
+*****Start read file*****
+*****Start reading tri-nucleotide file*****
+*****Start reading mappability file*****
+*****Creating SNV Model*****
+*****Start read file*****
+*****Reading repeats*****
+NonRepeats        41791
+LINE               5250
+SINE                590
+DNA                 522
+Simple_repeat       495
+LTR                 425
+Low_complexity      332
+Name: RepeatsMask, dtype: int64
+*****Reading Segmental Duplication*****
+NonSegDup    49331
+SegDup          74
+Name: SegmentDup, dtype: int64
+*****Creating InDel Model*****
+(49336, 13)
+NonRepeats_NonSegDup        41717
+LINE_NonSegDup               5250
+SINE_NonSegDup                590
+DNA_NonSegDup                 522
+Simple_repeat_NonSegDup       495
+LTR_NonSegDup                 425
+Low_complexity_NonSegDup      332
+NonRepeats_SegDup              74
+Name: Rep_Segdup, dtype: int64
