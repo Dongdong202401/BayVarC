@@ -25,9 +25,9 @@ BayVarC, a novel variant caller specifically designed for variant calling in liq
 To see the help for the program, run:
 
 ```shell
-<path_to_bayvarc_folder>/bin/BayVarC-Model/dist/BayVarC-Model -h
+<path_to_bayvarc_folder>/bin/BayVarC-Model -h
 
-<path_to_bayvarc_folder>/bin/BayVarC/dist/BayVarC -h
+<path_to_bayvarc_folder>/bin/BayVarC -h
 ```
 
  
@@ -39,10 +39,10 @@ To see the help for the program, run:
 To train BayVarC error model based on their own experimental environment, the following is an example command to run:
 
 ```shell
-<path_to_bayvarc_folder>/dist/BayVarC-Model -c <training.sample.list> -p <model_prefix> -cut <frequency_cutoff> -m <mappability.features.file> -t <trinucleotide.feature.file> -r <repeats.feature.file> -s <segmentDup.feature.file> -o <output_to_path> 
+<path_to_bayvarc_folder>/bin/BayVarC-Model -c <training.sample.list> -p <model_prefix> -cut <frequency_cutoff> -m <mappability.features.file> -t <trinucleotide.feature.file> -r <repeats.feature.file> -s <segmentDup.feature.file> -o <output_to_path> 
 ```
 
-The model generation test script is stored in file `Create_model_test.sh`. The input data of tests is stored in folder `example/Input data/model_generation` directory. The output model of the tests can be viewed in the `example/output data/model/` directory, the position-specific error is store in file `SNV_Model/<model_prefix> _snvs.posterior.xls` and `InDel_Model/<model_prefix> _indels.posterior.xls` respectively.
+The model generation test script is stored in file `Create_model_test.sh`. The input data of tests is stored in folder `Input data/` directory. The output model of the tests can be viewed in the `output data/` directory, the position-specific error is store in file `SNV_Model/<model_prefix> _snvs.posterior.xls` and `InDel_Model/<model_prefix> _indels.posterior.xls` respectively.
 
  
 
@@ -51,10 +51,10 @@ The model generation test script is stored in file `Create_model_test.sh`. The i
 To run variant caller pipeline from mpileup file, BayVarC employs Binomial testing at predefined significance alpha to determine the observed signal, the following is an example command to run:
 
 ```shell
-<path_to_bayvarc_folder>/dist/BayVarC -i <mpileupfile> -s <sample> -m <error_model_dir> -p <error_model_prefix> -a <significance_level> -ins <insertion_length_threshold> -del <deletion_length_threshold> -d <minimum_total_depth> -c <minimum alt reads> -f <minimum mismatch frequency> -r <reference_file> -n <ncpu> -o <output_to_path>
+<path_to_bayvarc_folder>/bin/BayVarC -i <mpileupfile> -s <sample> -m <error_model_dir> -p <error_model_prefix> -a <significance_level> -ins <insertion_length_threshold> -del <deletion_length_threshold> -d <minimum_total_depth> -c <minimum alt reads> -f <minimum mismatch frequency> -r <reference_file> -n <ncpu> -o <output_to_path>
 ```
 
-The variants calling test script is stored in file `Variant_calling_test.sh`. The input data of tests is stored in folder `example/input data/variant_calling/` directory. The output model of the tests can be viewed in the `example/output data/variants calling results/` directory, the mutations with ‘**PASS**’ is accept as a confident somatic mutation in `*filter.vcf` files.
+The variants calling test script is stored in file `Variant_calling_test.sh`. The output model of the tests can be viewed in the `output data/` directory, the mutations with ‘**PASS**’ is accept as a confident somatic mutation in `*filter.vcf` files.
 
  
 
