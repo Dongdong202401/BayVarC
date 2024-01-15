@@ -6,7 +6,7 @@
 ./bin/BayVarC \
   -i Input data/OS-01.mpileup \
   -s OS-01 \
-  -m ./Panel_of_mormal_model/ \
+  -m ./Panel_of_normal_model/ \
   -p all40s \
   -a 1e-04 \
   -ins 10 \
