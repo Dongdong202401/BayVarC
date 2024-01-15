@@ -116,7 +116,7 @@ The whole genome feature files can be download from UCSC and then use ‘bedtool
 
 ## License
 
-The code is freely available under the [GNU license](http://www.opensource.org/licenses/mit-license.html).
+The code is freely available under the [GNU license](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
 ## Contact
 
